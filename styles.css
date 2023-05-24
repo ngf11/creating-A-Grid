@@ -19,3 +19,9 @@
 .last-column {
   background-color: lightblue;
 }
+
+.item::hover {
+  content: "Hello";
+  text-align: center;
+  transform: 800ms ease;
+}
