@@ -14,15 +14,20 @@
 
 .container {
   display: grid;
-  grid-template: 25px 25px 25px 25px / auto;
-
+  grid-template: auto / auto;
+  overflow: hidden;
+  text-align: center;
   grid-template-areas:
     "header header header "
     "sidebar nav nav "
     "sidebar artical artical"
+    "sidebar artical artical"
+    "sidebar artical artical"
     "footer footer footer";
-  gap: 5px;
-  border-radius: 5px;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  height: 100vh;
 }
 
 #header {
@@ -41,8 +46,14 @@
 }
 
 #artical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   grid-area: artical;
   background-color: var(--artical-color);
+  padding: 3rem;
+  align-items: center;
 }
 
 #footer {
@@ -51,6 +62,5 @@
 }
 
 .text {
-  font-size: 10px;
-  line-height: 1rem;
+  font-size: 2rem;
 }
